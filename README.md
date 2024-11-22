@@ -52,17 +52,32 @@ Here are the main services you will set up:
 ## 📂 Directory Structure
 
 ```plaintext
-42Inception/
+42_INCEPTION/
 ├── srcs/
-│   ├── docker-compose.yml
-│   ├── nginx/
-│   │   └── default.conf
-│   ├── wordpress/
+│   ├── requirements/
+│   │   └── bonus/
+│   │       ├── adminer/
+│   │       │   └── Dockerfile
+│   │       ├── simple_page/
+│   │       │   └── website/
+│   │       │       ├── index.html
+│   │       │       └── styles.css
+│   │       └── Dockerfile
+│   ├── mariadb/
+│   │   ├── conf/
+│   │   │   └── 50-server.cnf
+│   │   ├── tools/
 │   │   └── Dockerfile
-│   ├── mysql/
-│       └── Dockerfile
-├── README.md
-└── .gitignore
+│   ├── nginx/
+│   │   ├── conf/
+│   │   │   └── nginx.conf
+│   │   └── Dockerfile
+│   ├── wordpress/
+│   │   ├── tools/
+│   │   └── Dockerfile
+│   ├── .env
+│   ├── docker-compose.yml
+└── Makefile
 ```
 
 
