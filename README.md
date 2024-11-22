@@ -1,55 +1,72 @@
-# 42 Inception
+# 42 Inception 🚀
 
-## Project Overview
-Inception is a System Administration project at 42 School that focuses on Docker containerization. 
-The goal is to set up a small infrastructure composed of different services under specific rules 
-using Docker Compose.
+## Project Overview 📚
 
-   ![inc](https://github.com/HChairiRuya/42Inception/assets/103891316/31fef047-10bc-45bd-89d3-5b0a9f50a263)
+Inception is a **System Administration** project at **42 School** that focuses on **Docker containerization**.  
+The goal is to set up a small infrastructure composed of different services under specific rules using Docker Compose.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9d6c8ab9-91e2-4a2f-9fb4-57607a6f60e7" alt="Project Overview" style="width:80%; border-radius:10px;"/>
+</p>
+
+---
+
+## 🗂 Table of Contents
+- [✨ Requirements](#requirements)
+- [🛠️ Services](#services)
+- [📂 Directory Structure](#directory-structure)
+- [⚙️ Configuration](#configuration)
+- [🐛 Troubleshooting](#troubleshooting)
+
+---
+
+## ✨ Requirements
+
+Before starting, ensure the following are installed:
+
+- 🐳 **Docker**
+- ⚙️ **Docker Compose**
+- 📦 **Containers**
+- 💾 **Volumes**
+- 🌐 **Network**
+
+---
+
+## 🛠️ Services
+
+Here are the main services you will set up:  
+
+- 🌐 **NGINX**: Web server with SSL/TLS support.  
+- 📝 **WordPress**: CMS with php-fpm.  
+- 💾 **MariaDB**: Database server.  
+
+**Bonus Services**:  
+
+- 🔄 **Redis**: Caching system.  
+- 📡 **FTP server**: File transfer protocol server.  
+- 🖼️ **Static website**: Simple static HTML site.  
+- 📊 **Adminer**: Managing contents of MySQL databases.  
+
+---
+
+## 📂 Directory Structure
+
+```plaintext
+42Inception/
+├── srcs/
+│   ├── docker-compose.yml
+│   ├── nginx/
+│   │   └── default.conf
+│   ├── wordpress/
+│   │   └── Dockerfile
+│   ├── mysql/
+│       └── Dockerfile
+├── README.md
+└── .gitignore
+```
 
 
-## Table of Contents
-- [Requirements](#requirements)
-- [Services](#services)
-- [Directory Structure](#directory-structure)
-- [Configuration](#configuration)
-- [Troubleshooting](#troubleshooting)
-
-## Requirements
-- Docker
-- Docker Compose
-- Containers
-- Volumes
-- Network
-
-## Services
-- **NGINX**: Web server with SSL/TLS support
-- **WordPress**: CMS with php-fpm
-- **MariaDB**: Database server
-- **Redis** (bonus): Caching system
-- **FTP server** (bonus): File transfer protocol server
-- **Static website** (bonus): Simple static website
-- **Adminer** (bonus): Managing contents of MySQL databases
-
-## Directory Structure
-inception/ <br>
-├── Makefile <br>
-├── docker-compose.yml <br>
-├── .env <br>
-├── secrets <br>
-└── srcs/ <br>
-    ├── requirements/ <br>
-    │   ├── nginx/ <br>
-    │   ├── wordpress/ <br>
-    │   ├── mariadb/ <br>
-    │   ├── redis/ <br>
-    │   ├── ftp-server/ <br>
-    │   ├── adminer/ <br>
-    │   └── static-website/ <br>
-    └── tools/ <br>
-
-
-## Configuration
+## ⚙️ Configuration
 Key configuration files:
 - `.env`: Environment variables
 - `docker-compose.yml`: Service definitions
@@ -63,7 +80,7 @@ Important environment variables:
 - `MYSQL_PASSWORD`: MariaDB user password
 - `WORDPRESS_DB_NAME`: WordPress database name
 
-## Troubleshooting
+## 🐛 Troubleshooting
 1. **Containers not starting**: 
    - Check logs: `docker-compose logs`
    - Verify port availability
